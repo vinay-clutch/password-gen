@@ -1,0 +1,168 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FIRST PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+     *{
+  margin: 0;
+  padding: 0;
+  font-family:'poppins',sans-serif;
+  box-sizing: border-box;
+  background: #111111;
+}
+.hero{
+  
+  width: 100%;
+  height: 100vh;
+  background: #111111;
+  color: #0a9c29;
+  display:block;
+  align-items: center;
+  justify-content: center;
+  
+}
+.container{
+  
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 20%;
+  width: 400px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+}
+.butn{
+  color: black;
+  border: none;
+  margin-left: 52%;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:25px;
+  margin: 4px 2px;
+  background-color:white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 220px;
+  height: 40px;
+  margin-left : 40px;;
+  position: center;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+h1{
+  color: rgb(201, 55, 55);
+  font-family: "Press Start 2P","consolas" ,sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 20px;
+}
+.classs{
+  
+  margin-top: 3%;
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 450px;
+  padding: 25px;
+}
+.row{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 24px;
+}
+label{
+  font-family: "consolas", sans-serif;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.che{
+  font-family: "consolas", sans-serif;
+  width: 30px;
+  height: 30px;
+  position: center;
+}
+
+
+label span{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 3px solid#fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+p{
+  font-family: "consolas", sans-serif;
+}
+
+select{
+  color: white;
+}
+.butnclas{
+  margin-left: 7%;
+}
+    </style>
+  </head>
+  <body>
+    
+    <div class="hero">
+      <div class="classs"><h1 >PASSWORD GENERATOR</h1></div> 
+      <form action="{% url 'password'%}">
+      <div class="container">
+        <div class="row">
+          <p > SELECT :</P>
+          <lable>
+         <select name="length" >
+          <option value="6">6 CHARACTERS</option>
+          <option value="7">7 CHARACTERS</option>
+          <option value="8">8 CHARACTERS</option>
+          <option value="9">9 CHARACTERS</option>
+          <option value="10">10 CHARACTERS</option>
+          <option value="11">11 CHARACTERS</option>
+         </select>
+            <span></span>
+          </lable>
+         </div>
+        <div class="row">
+          <p > UPPER CASE</P>
+          <lable>
+            <input type="checkbox" class="che" name="uppercase"">
+            <span></span>
+          </lable>
+         </div>
+         <div class="row">
+          <p> LOWER CASE</P>
+          <lable>
+            <input type="checkbox" class="che" name="lowercase">
+          <span></span></lable>
+         </div>
+         <div class="row">
+          <p> SPECIAL</P>
+          <lable>
+            <input type="checkbox" class="che" name="special">
+          <span></span></lable>
+         </div>
+         <div class="row">
+          <p> NUMBERS</P>
+          <lable>
+            <input type="checkbox" class="che" name="numbers">
+          <span></span></lable>
+         </div>
+          
+     <div class = "butnclas">
+     <input type ="submit"  class = "butn" value="GENERATE PASSWORD"></div>
+  </div>
+</div>
+</form>
+  </body>
+</html>
